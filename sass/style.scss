@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #2980b9;
+}
+
+@mixin box($left, $right){
+    width: 20%;
+    height: 74vh;
+    background-color: white;
+    display: inline-table;
+    margin: 110px $left 0 $right;
+    text-align: center;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 5px;
+    .name{
+        margin-top: 10px;
+        font-size: 1rem;
+        font-weight: 700;
+        color: black;
+    }
+    div{
+        width: 100%;
+        height: 165px;
+        position: absolute;
+        top: 300px;
+    }
+    p{
+        font-size: 14px;
+        color: #b9baba;
+        margin-top: 4px;
+    }
+    h2{
+        color: #51d384;
+        font-size: 1.1rem;
+        margin-top: 15px;
+    }
+    h3{
+        font-size: 0.8rem;
+        color: #b5b5b5;
+        text-decoration-line: line-through;
+    }
+    button{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 45px;
+        border: none;
+        border-radius: 0 0 5px 5px;
+        background-color: #2f2f2f;
+        color: #faf3ed;
+    }
+}
+
+img{
+    width: 162px*1.25;
+    height: 250px*1.25;
+    // box-shadow: 1px 1px 8px 10px thistle;
+    position: absolute;
+    top: -25px;
+    left: 30px;
+}
+
+.hero{
+    @include box(20px, 380px);
+
+}
+
+.fantastic{
+    @include box(380px, 20px);
+}
