@@ -9,12 +9,30 @@ body {
   background-color: #2980b9;
 }
 
-img {
+.marvel {
   width: 202.5px;
   height: 312.5px;
-  position: absolute;
-  top: -25px;
-  left: 30px;
+  box-shadow: 0px 6px 15px 2px rgba(75, 74, 74, 0.747);
+  position: fixed;
+  top: 85px;
+  left: 415px;
+  z-index: 2;
+}
+.marvel:hover + .hero {
+  visibility: visible;
+}
+
+.future {
+  width: 202.5px;
+  height: 312.5px;
+  box-shadow: 0px 6px 15px 2px rgba(75, 74, 74, 0.747);
+  position: fixed;
+  top: 85px;
+  left: 730px;
+  z-index: 2;
+}
+.future:hover + .fantastic {
+  visibility: visible;
 }
 
 .hero {
@@ -27,6 +45,9 @@ img {
   position: relative;
   font-family: "Roboto", sans-serif;
   border-radius: 5px;
+  box-shadow: 0px 6px 15px 2px rgba(75, 74, 74, 0.747);
+  z-index: 1;
+  visibility: hidden;
 }
 .hero .name {
   margin-top: 10px;
@@ -66,6 +87,15 @@ img {
   background-color: #2f2f2f;
   color: #faf3ed;
 }
+.hero:hover {
+  visibility: visible;
+  cursor: pointer;
+  animation-name: box;
+  animation-duration: 1.5s;
+  animation-delay: 0.5s;
+  animation-timing-function: ease;
+  animation-direction: alternate;
+}
 
 .fantastic {
   width: 20%;
@@ -77,6 +107,9 @@ img {
   position: relative;
   font-family: "Roboto", sans-serif;
   border-radius: 5px;
+  box-shadow: 0px 6px 15px 2px rgba(75, 74, 74, 0.747);
+  z-index: 1;
+  visibility: hidden;
 }
 .fantastic .name {
   margin-top: 10px;
@@ -115,6 +148,24 @@ img {
   border-radius: 0 0 5px 5px;
   background-color: #2f2f2f;
   color: #faf3ed;
+}
+.fantastic:hover {
+  visibility: visible;
+  cursor: pointer;
+  animation-name: box;
+  animation-duration: 1.5s;
+  animation-delay: 0.5s;
+  animation-timing-function: ease;
+  animation-direction: alternate;
+}
+
+@keyframes box {
+  from {
+    transform: scale(0.9, 0.9);
+  }
+  to {
+    transform: scale(1, 1);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
